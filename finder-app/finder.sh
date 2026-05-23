@@ -6,7 +6,7 @@ searchstr=$2
 
 if [ "$#" -lt 2 ]
 then
-	echo "Insufficient arguments"
+	echo "Insufficient arguments "
 	exit 1
 else
 	if [ ! -d "$filesdir" ]
