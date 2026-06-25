@@ -19,9 +19,7 @@ int main(int argc, char* argv[]){
     char* writestr = argv[2];
 
 
-    int fd = open(argv[1], O_WRONLY | O_CREAT | O_TRUNC, 0664);  // Might cause an error due to not 
-                                       // creating a file it doesn't exist
-   
+    int fd = open(argv[1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
     syslog(LOG_DEBUG, "Writing %s to %s", writestr, argv[1]);
     if(write(fd, writestr, strlen(writestr)) == -1){
