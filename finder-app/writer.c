@@ -26,7 +26,7 @@ int main(int argc, char* argv[]){
         printf("File not created");
         syslog(LOG_ERR, "File not created");
         close(fd);
-        return 1;
+        return 2;
     }
 
     close(fd);
